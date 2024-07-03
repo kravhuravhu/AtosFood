@@ -2,7 +2,18 @@
 
 header('Content-Type: application/json');
 
-include 'menu_db.php';
+$servername = "localhost";
+$username = "juniorra";
+$password = "''";
+$dbname = "Menu";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 $sql = "SELECT itemID, itemName, itemDescription, itemPrice, itemImage, 'Breakfast' as itemCategory FROM Breakfast
         UNION ALL
