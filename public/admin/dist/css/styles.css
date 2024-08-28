@@ -1,0 +1,418 @@
+.todo-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.todo-input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input {
+  width: calc(100% - 120px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background: #4cae4c;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  padding: 10px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.todo-item:hover {
+  background: #f1f1f1;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+  width: 40px;
+}
+
+button.todo-edit,
+button.todo-delete {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+  transition: color 0.3s;
+}
+
+button.todo-edit:hover {
+  color: #008b25;
+}
+
+button.todo-delete:hover {
+  color: #d9534f;
+}
+
+button.todo-delete {
+  margin-left: 10px;
+}
+
+.todo-drag-handle {
+  cursor: grab;
+  margin-right: 10px;
+}
+
+.todo-drag-handle::before {
+  content: '⋮⋮';
+  font-size: 18px;
+  color: #888;
+}
+
+.todo-span {
+  flex-grow: 1;
+  margin-left: 10px;
+  overflow-wrap: break-word;
+}
+
+.todo-timestamp {
+  font-size: 12px;
+  color: #999;
+  margin-left: 10px;
+  width: 66px;
+}
+
+/* Direct Chat Styling--------------------------------------------------------------------------------*/
+
+.fa-pencil-alt{
+  color: blue;
+}
+.fa-trash-alt{
+  color: red;
+}
+
+.direct-chat-msg.left .direct-chat-infos {
+text-align: left;
+}
+
+.direct-chat-msg.right .direct-chat-infos {
+text-align: right;
+}
+
+.contacts-pane {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+  overflow-y: auto;
+  display: none;
+}
+.contacts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contacts-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.contacts-list-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.contacts-list-info {
+  flex: 1;
+}
+
+.contacts-list-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+.contacts-list-msg {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+
+.contacts-list-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.contacts-list>li {
+border-bottom: 1px solid rgba(0, 0, 0, .2);
+margin: 0;
+padding: 10px;
+}
+*, ::after, ::before {
+box-sizing: border-box;
+}
+
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+unicode-bidi: isolate;
+}
+.contacts-list {
+padding-left: 0;
+list-style: none;
+}
+ul {
+list-style-type: none;
+padding: 0;
+}
+
+ul {
+list-style-type: disc;
+}
+.contacts-list li {
+display: flex;
+align-items: center;
+margin-bottom: 15px;
+border-bottom: 1px solid #ddd;  /* Add this line */
+}
+.card {
+position: relative;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-flex-direction: column;
+-ms-flex-direction: column;
+flex-direction: column;
+min-width: 0;
+word-wrap: break-word;
+background-color: #fff;
+background-clip: border-box;
+border: 0 solid rgba(0, 0, 0, .125);
+border-radius: .25rem;
+}
+
+.direct-chat-msg {
+border-bottom: 1px solid #ddd;  /* Add this line */
+padding-bottom: 10px; /* Optional: Add some padding to space out the border */
+}
+
+*, ::after, ::before {
+box-sizing: border-box;
+}
+.card-header {
+position: relative; /* Ensure relative positioning for absolute child */
+}
+
+.direct-chat-contacts {
+font-size: 0.75em;
+padding-left: 80px;
+top: 0; /* Position below the card-header */
+
+width: 100%;
+margin-top: 49px;
+padding-right: 50%;
+
+right: 546px;
+background: #7d7a7a; /* Example background color */
+/* border-top: 1px solid #ddd; Example border style */
+/*z-index: 100; /* Ensure contacts pane is above other content */
+/* display: none; Initially hidden */
+/* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); Example shadow */
+cursor: move; /* Enable cursor as move for draggable */
+text-decoration-style: none;
+font-style: none;
+list-style-type: none;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+}
+
+.container {
+max-width: 800px;
+margin: 20px auto;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-window {
+height: 500px;
+overflow-y: scroll;
+padding: 20px;
+}
+
+.chat-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #ddd;
+padding-bottom: 10px;
+}
+
+.chat-header h2 {
+margin: 0;
+}
+
+.chat-messages {
+margin-bottom: 20px;
+}
+
+.direct-chat-msg {
+margin-bottom: 20px;
+overflow: hidden;
+clear: both;
+}
+
+.direct-chat-infos {
+margin-bottom: 5px;
+}
+
+.direct-chat-name {
+font-weight: bold;
+}
+
+.direct-chat-timestamp {
+font-size: 12px;
+color: #777;
+}
+
+.direct-chat-img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+float: left;
+margin-right: 10px;
+}
+
+.direct-chat-text {
+padding: 10px;
+border-radius: 10px;
+max-width: 70%;
+}
+
+.right .direct-chat-text {
+background-color: #007bff;
+color: #fff;
+float: right;
+}
+
+.left .direct-chat-text {
+background-color: #d2d6de;
+color: #000;
+float: left;
+}
+
+.chat-buttons {
+margin-top: 5px;
+}
+
+.chat-buttons button {
+background: none;
+border: none;
+cursor: pointer;
+margin-right: 5px;
+}
+
+.chat-input {
+display: flex;
+align-items: center;
+border-top: 1px solid #ddd;
+padding: 10px;
+}
+
+.chat-input input {
+flex: 1;
+padding: 8px;
+border: 1px solid #ddd;
+border-radius: 5px;
+margin-right: 10px;
+}
+
+.chat-input button {
+background-color: #007bff;
+color: #fff;
+border: none;
+padding: 8px 15px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.contacts-list {
+display: none;
+height: 500px;
+overflow-y: scroll;
+padding: 20px;
+}
+
+.contacts-list-info {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.contacts-list a {
+display: block;
+text-decoration: none;
+color: #333;
+padding: 10px;
+}
+
+.contacts-list a:hover {
+background-color: #f0f0f0;
+}
+
+.contacts-list-img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+margin-right: 10px;
+}

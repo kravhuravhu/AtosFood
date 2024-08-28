@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(52,58,64);
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+ 
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgb(52,58,64);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+ 
+h1 {
+    text-align: center;
+    color: white;
+}
+ 
+p {
+    color: white;
+}
+ 
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+ 
+form input {
+    flex: 1 1 200px;
+    padding: 10px;
+    border: 1px solid rgb(52,58,64);
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+}
+
+form input[type="date"] {
+    color: rgb(222, 222, 222);
+}
+
+form button {
+    flex: 1 1 100%;
+    padding: 10px;
+    border: none;
+    background: #5cb85c;
+    color: rgb(52,58,64);
+    border-radius: 4px;
+    cursor: pointer;
+}
+ 
+form button:hover {
+    background: #4cae4c;
+}
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+ 
+table, th, td {
+    border: 1px solid white;
+}
+ 
+th, td {
+    padding: 10px;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+ 
+.password {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+ 
+th {
+    background: rgb(52,58,64);
+}
+ 
+.action-btn, .edit-btn {
+    padding: 8px 12px;
+    border: none;
+    color: rgb(52,58,64);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+ 
+.action-btn {
+    background: #d9534f;
+}
+ 
+.action-btn:hover {
+    background: #c9302c;
+}
+ 
+.edit-btn {
+    background: #0275d8;
+}
+ 
+.edit-btn:hover {
+    background: #025aa5;
+}
+ 

@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+ 
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+ 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+ 
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+ 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+ 
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f9f9f9;
+}
+ 
+form {
+    display: flex;
+    flex-direction: column;
+}
+ 
+label {
+    margin: 10px 0 5px;
+}
+ 
+input, textarea, button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+ 
+input, textarea, .update_button {
+    width: 90%;
+}
+ 
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: #218838;
+}
+ 
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+ 
+.popup-content {
+    background-color: rgb(52,58,64);
+    padding: 40px;
+    border-radius: 8px;
+    width: 95%;
+    position: relative;
+}
+ 
+#editItemForm > .popup-content, 
+#editCustomer > .popup-content {
+    width: 55%;
+    margin: 0 auto;
+} 
+ 
+.selectCategory {
+    margin: 5px 0;
+    padding: 10px;
+}
+ 
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+ 
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
+ 
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+ 
+.table-container th, .table-container td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px   rgb(52,58,64);
+}
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+ 
+table, th, td {
+    border: 1px solid #ddd;
+}
+ 
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+.password {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+ 
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+ 
+.table-container th, .table-container td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+ 
+th {
+    position: sticky;
+    top: 0;
+    background:  rgb(52,58,64);
+    z-index: 2;
+}
+ 
+#editItemCategory {
+    width: 200px;
+}
